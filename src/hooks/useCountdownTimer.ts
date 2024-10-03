@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-const useCountdownTimer = (seconds: number) => {
+const useCountdown = (seconds: number) => {
     const [timeLeft,setTimeLeft] = useState(seconds)
     const intervalRef = useRef<NodeJS.Timer | null>(null);
 
@@ -32,4 +32,4 @@ const useCountdownTimer = (seconds: number) => {
   return {timeLeft,startCountdown,resetCountdown};
 };
 
-export default useCountdownTimer
+export default useCountdown

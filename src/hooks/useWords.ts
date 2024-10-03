@@ -1,8 +1,8 @@
 import { faker } from "@faker-js/faker";
 import { useCallback, useState } from "react";
 
-const generateWords = (count:number) =>{
-    return faker.random.words(count).toLowerCase();
+const generateWords = (count:number):string => {
+    return faker.word.words(count).toLowerCase();
 };
 
 const useWords = (count:number) => {
@@ -13,5 +13,4 @@ const useWords = (count:number) => {
     },[count]);
     return {words,updateWords};
 };
-
 export default useWords;
